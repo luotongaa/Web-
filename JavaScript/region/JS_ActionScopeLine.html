@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoit" content="width=device-width", initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 作用域链
+        var num = 10;
+        function fn () {        // 外部函数
+            var num = 20;
+            function fun () {   // 内部函数
+                console.log(num);   // 内部函数能够访问外部函数 采用链式查找，就近原则
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+

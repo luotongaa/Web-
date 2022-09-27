@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoit" content="width=device-width", initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 函数
+        function getSum(num1, num2) {
+            var sum = 0;
+            for (var i = num1; i <= num2; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+
+        getSum(1, 100);
+        getSum(10, 50);
+
+        // 函数形参实参个数匹配
+        function getsum(num1, num2) {
+            console.log(num1 + num2);
+        }
+        // 1. 如果实参的个数和形参的个数一样 则正常输出结果
+        getsum(1, 2);
+        // 2. 如果实参的个数多于形参的个数 会取到形参的个数
+        getsum(1, 2, 3);
+        // 3. 如果实参的个数小于形参的个数      最终结果就是NaN
+        // 形参可以看做是不用声明的变量  num2 是一个变量但是没有接受值 结果就是undefined
+        getsum(1);  // NaN
+        // 函数返回值的注意事项
+        // 1. return 后面的代码不会被执行
+        // 2. return 只能返回一个值 
+        function fn(num1, num2) {
+            return num1, num2;      // 且返回的结果是最后一个值
+        }
+        console.log(fn(1, 2));
+        // 3. 我们求任意两个数的 加减乘数结果
+        function getResult(num1, num2) {
+            return [num1 + num2, num1 - num2, num1 * num2, num1 / num2];
+        }
+        var re = getResult(1, 2);  // 返回的是一个数组
+        console.log(re);
+        // 4. 函数如果有 return 则返回的是 return 后面的值,如果函数没有 return 则返回 undefined
+        function fun1() {
+            return 666;
+        }
+        console.log(fun1());    // 返回 666
+        function fun2() {
+
+        }
+        console.log(fun2());    // 返回 undefined
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+

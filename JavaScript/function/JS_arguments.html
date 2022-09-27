@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoit" content="width=device-width", initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // arguments 的使用  只有函数才是 arguments 对象   而且是每个函数都内置好了这个 arguments
+        function fn() {
+            console.log(arguments);  // 里面存储了所有传递过来的实参     arguments = [1,2,3]
+            console.log(arguments.length);
+            console.log(arguments[2])
+            // 可以按照数组的方式遍历 arguments
+            for (var i = 0; i < arguments.length; i++) {
+                console.log(arguments[1]);
+            }
+        }
+        fn(1, 2, 3);
+        fn(1, 2, 3, 4, 5)
+        // 伪数组 并不是真正意义上的数组
+        // 1. 具有数组的 length 属性
+        // 2. 按照索引的方式进行存储的
+        // 3. 它没有真正数组的一些方法 pop()  push() 等等
+
+        // 利用函数来求任意个数的最大值
+        function getMax() {
+            var max = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] (> max)) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        console.log(getMax(1,2,3));
+        console.log(getMax(1,3,4,6,9));
+        console.log(getMax(1,2,56,234,123));
+
+        // 函数的2中声明方式
+        // 1. 利用函数关键字自定义函数
+        function fn() {
+
+        }
+        fn();
+        // 2. 函数表达式 (匿名函数)
+        var fun = function(){};
+        var fun = function(aru) {
+            console.log('我是函数表达式');
+            console.log(aru);
+        }
+        fun('pink');
+        // (1) fun是变量名 不是函数名
+        // (2) 函数表达式声明方式跟声明变量差不多,只不过变量里面存的是值 而函数表达式里面存的是函数
+        // (3) 函数表达式也可以进行传递参数
+   </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+

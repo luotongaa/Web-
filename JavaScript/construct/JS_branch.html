@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoit" content="width=device-width", initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1. if 的语法结构   如果if
+        /*
+        if (条件表达式){
+            // 执行语句
+        }
+        */
+
+        // 2. 执行思路 如果 if 里面条件表达式结果为真 true 则执行大括号里面的 执行语句
+        // 如果if 条件表达式如果为假 则不执行大括号里面的语句 则执行 if语句后的代码
+        // 例
+        if (3 < 5){
+            alert('沙漠骆驼')
+        }
+        // 执行思路
+        /*
+        if (条件表达式) {
+            // 执行语句1
+        }  else {
+            // 执行语句2
+        }
+        */
+
+        // 3. 多分支语句
+        /*
+        if (条件表达式1) {
+            // 执行语句1
+        }  else if (条件表达式2) {
+            // 执行语句2
+        }  else if (条件表达式3) {
+            // 执行语句3
+        }  else {
+            // 执行语句4
+        }
+        */
+        // 4.执行思路
+        // 如果条件表达式1 满足就执行 语句1 执行完毕后, 推出整个 if 分支语句
+        // 如果条件表达式1 不满足，则判断条件表达式2 满足的话，执行语句2 以此类推
+        // 5. 注意点
+        // (1) 多分支语句还是多选1 最后只能有一个语句执行
+        // (2) else if 里面的条件理论上是可以任意多个的
+        // (3) else if 中间有空格
+        
+        // 三元表达式
+        // 1. 有三元运算符组成的式子
+        // 2. ++num    3 + 5    ？:
+        // 条件表达式 ? 表达式1 : 表达式2
+        // 如果条件表达式结果为真 则返回 表达式1的值 反之则返回 表达式2的值 
+        var num = 10;
+        var result = num > 5 ? '是的':'不是的';     // 我们知道表达式是有返回值的
+        console.log(result);
+        // 上式等价于下式
+        if (num > 5) {
+            result = '是的';
+        }  else {
+            result = '不是的';
+        } 
+
+        // Switch 语句 针对特定值
+        /*
+        switch(表达式) {
+            case value1:
+                执行语句1;
+                break;
+            case value2:
+                执行语句2;
+                break;
+            ...
+            default:
+                执行最后的语句;
+        }
+        */
+       switch (2) {
+            case 1:
+                console.log('这是1');
+            case 2:
+                console.log('这是2');
+            case 3:
+                console.log('这是3');
+            default:
+                console.log('没有匹配结果');
+        }
+        // switch 匹配时采用的方法是全等于
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+

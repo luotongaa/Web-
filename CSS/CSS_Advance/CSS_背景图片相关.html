@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title>Document</title>
+    <style>
+      div {
+        width: 400px;
+        height: 400px;
+        background-color: pink;
+        background-image: url(OIP-C.jpg);   /* 会自动平铺图片 */
+        background-repeat: no-repeat;   /* no-repeat不进行平铺 */
+        background-position: center;     /* 背景的位置 */
+        /* background-position: 0 0; */
+        /* background-position: 50px 0; */
+        /* background-position: 50px 100px; */
+        /* background-position: -50px -100px; */
+        /* background-position: right 0; */
+        /* background-position: right bottom; */
+
+    }   
+    p {
+        /* 连写 */
+        /* background: color image repeat positior; */
+        width: 400px;
+        height: 400px;
+        background: red url(OIP-C.jpg) no-repeat center;
+    }
+    </style>
+</head>
+<body>
+    <div>显示的一大串用于测试背景并非图片的无用文字</div> 
+    <p>12121</p>  
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title>Document</title>
+    <style>
+       /* 复合选择器 */
+       /* 子代选择器 */
+       /* 父选择器 > 后代选择器 {} */
+       div > a {
+        color:red;
+       }
+       /*
+       该方法会将所有的其中的 a 选中
+       div a{
+        color: #000;
+       } 
+       */
+    </style>
+</head>
+<body>
+    <p>这是一个P标签</p>
+    <div>
+        <a href="#">这是div的儿子a</a>
+        <p>
+            <a href="#">这是div的孙子p</a>
+        </p>
+    </div>
+</body>
+</html>

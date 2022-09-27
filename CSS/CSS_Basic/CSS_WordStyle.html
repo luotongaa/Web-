@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title>Document</title>
+    <style>
+        /* 层叠样式表，新属性覆盖旧属性 */
+        p {
+             font-size: 30px;      /* 字号 */
+             font-weight: 700;     /* 字体粗细 */
+             font-style: italic;   /* 字体样式是倾斜 */
+             /* 若有些字体未安装，会按照宋体，黑体，微软雅黑的顺序显示，复合属性 */
+             font-family: 宋体,黑体,微软雅黑,sans-serif;    /* 字体改为宋体，默认为微软雅黑 */
+        }
+        em {
+            font-style: normal;    /*不倾斜*/
+        }
+        .qwe {
+            /* font: stytle weight size 字体 */
+            /* 只能省略前两个 */
+            font: initial 700 55px 宋体; 
+        }
+    </style>
+</head>
+<body>
+    <!-- 浏览器当中默认字号为16 -->
+    <p>段落文字</p>
+    <em>em</em>
+    <p class="qwe">asjkdhkajsd</p>
+</body>
+</html>
