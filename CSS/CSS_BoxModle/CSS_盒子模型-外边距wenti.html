@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        /* 合并问题： 当上下边距同时被定义是,会发生合并,只会使用最大值 */
+        .one {
+            margin-bottom: 50px;
+        }
+
+        .two {
+            margin-top: 60px;
+        }
+
+        .father {
+            width: 300px;
+            height: 300px;background-color: pink;
+
+            /* 一下方法可以解决外边距塌陷现象 */
+
+            /* padding-top: 50px; */       /* 使用并没有问题 */
+            
+            /* 如果设计稿没有border，就不能使用该方法 */
+            /* border: 1px solid #000; */
+
+            /* overflow: hidden; */
+
+
+
+            /* 设置浮动 */
+        }
+
+        /* 外边距的塌陷现象 */
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+
+            margin-top: 50px;
+
+            /* 转换为行内块元素 */
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">11</div>
+    <div class="two">22</div>
+
+    <div class="father">
+        <div class="son">son</div>
+    </div>
+</body>
+</html>s
