@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title>Document</title>
+    <style>
+        div {
+            /* 浏览器解析行内块或行内标签的时候，如果标签换行书写会产生一个小的空白块 */
+            /* 利用浮动去解决 */
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+        .one {
+            background-color: pink;
+        }
+
+        .two {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 代码换行会产生一个空格的间距 -->
+    <div class="one">1</div>
+    <div class="two">2</div>
+</body>
+</html>

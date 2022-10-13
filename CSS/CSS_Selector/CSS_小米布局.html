@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title>Document</title>
+    <style>
+        .top {
+            height: 40px;
+            background-color: #333333;
+        }
+
+        .heard {
+            width: 1226px;
+            height: 100px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        
+        .content {
+            width: 1226px;
+            height: 460px;
+            background-color: green;
+            margin: 0 auto;
+        }
+        .right {
+            width: 234px;
+            height: 460px;
+            background-color: #ffa500;
+            float: left;
+        }
+
+        .left {
+            width: 992px;
+            height: 460px;
+            background-color: #87ceeb;
+            float: left;
+        }
+        
+        /*
+         CSS书写顺序：浏览器执行效率高
+            1. 浮动 / display
+            2. 盒子模型相关的属性：margin border padding 宽度高度背景色
+            3. 文字样式
+         */
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="heard"></div>
+    <div class="content">
+        <div class="right"></div>
+        <div class="left"></div>
+    </div>
+</body>
+</html>
