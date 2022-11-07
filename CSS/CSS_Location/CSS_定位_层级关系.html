@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+        width: 200px;
+        height: 200px;
+    }    
+
+    .one {
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        background-color: pink;
+        z-index: 1;
+    }
+
+    .two {
+        position: absolute;
+        left: 50px;
+        top: 100px;
+        background-color: skyblue;
+        z-index: 0;
+    }
+
+    /* 
+        默认情况下，两定位的盒子：后来者居上
+        z-index: 整数数字, 取值越大显示数字越靠上, 默认值为 0 
+        z-index 只有配合定位才会生效
+    */
+  </style>
+</head>
+<body>
+    
+    <div class="one">one</div>
+    <div class="two">two</div>
+</body>
+</html>

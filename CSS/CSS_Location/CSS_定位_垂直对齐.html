@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 浏览器遇到行内和行内块标签当作文字处理, 默认文字是按基线处理加上 vertical-align: middle 解决 */
+    .one {
+        height: 50px;
+        box-sizing: border-box;
+        vertical-align: middle;
+    }
+
+    .two {
+        vertical-align: middle;
+    }
+
+    .fatherone {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+    }
+
+    .fatherone input {
+        vertical-align: top;
+    }
+
+    .fathertwo {
+        width: 700px;
+        background-color: skyblue;
+    }
+
+    .fathertwo img {
+        /* 解决方案一 */
+        /* vertical-align: middle; */
+        /* 解决方案二 */
+        display: block;
+    }
+
+    .fatherthree {
+        width: 600px;
+        height: 600px;
+        background-color: yellowgreen;
+        line-height: 600px;
+        text-align: center;
+    }
+
+    .fatherthree img {
+        vertical-align: middle;
+    }
+
+  </style>
+</head>
+<body>
+    <h2>情况一</h2>
+    <input type="text" class="one"><input type="button" value="搜索" class="one">
+    <h2>情况二</h2>
+    <img src="1.jpg" alt="" class="two"><input type="text">
+    <h2>情况三</h2>
+    <div class="fatherone">
+        <input type="text">
+    </div>
+    <h2>情况四</h2>
+    <div class="fathertwo">
+        <img src="1.jpg" alt="">
+    </div>
+    <h2>情况五</h2>
+    <div class="fatherthree">
+        <img src="1.jpg" alt="">
+    </div>
+</body>
+</html>

@@ -7,16 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
         .top {
             margin: 0 auto;
             width: 1000px;
             /* height: 300px; */
             background-color: pink;
+
+            /* 最简单的清楚浮动的方法 */
+            overflow: hidden;
         }
 
         .bottom {
@@ -37,20 +35,6 @@
             height: 300px;
             background-color: skyblue;
         }
-
-        /* 双伪元素清除法 */
-        /* 这里出现 before 这一项的目的是解决外边距塌陷问题 */
-        .clearfix::before,
-        .clearfix::after {
-            content: '';
-            display: table;
-        }
-
-        /* 真正清除浮动的标签 */
-        .clearfix::after {
-            clear: both;
-        }
-
 
     </style>
 </head>

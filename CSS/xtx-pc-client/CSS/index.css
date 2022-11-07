@@ -1,0 +1,492 @@
+/* 放index页面的样式表 */
+.banner {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+    background-color: #000;
+}
+
+/* 侧导航 */
+.banner .aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.banner .aside li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .aside a {
+    position: relative;
+    padding-left: 35px;
+    padding-right: 20px;
+    display: block;
+    width: 250px;
+    height: 50px;
+
+    color: #fff;
+}
+
+.banner .aside a span {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.banner .aside a:hover {
+    background-color: #27ba9b;
+}
+
+.banner .aside a span::after {
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    content: '';
+    width: 6px;
+    height: 11px;
+    background-image: url(../images/sprites.png);
+    background-position: -80px -110px;
+}
+
+/* 箭头部分 */
+.prev,
+.next {
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    background-image: url(../images/sprites.png);
+}
+
+.prev {
+    left: 260px;
+    background-position: 14px -60px;
+}
+
+.next {
+    right: 10px;
+    background-position: -22px -60px;
+}
+
+/* 圆点 */
+.banner ol {
+    position: absolute;
+    bottom: 30px;
+    left: 680px;
+    height: 10px;
+    width: 200px;
+    /* background-color: #000; */
+}
+
+.banner ol li {
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner ol .active {
+    background-color: #fff;
+}
+
+/* 新鲜好物 */
+.goods .hd,
+.tuijian .hd,
+.pinpai .hd,
+.new .hd {
+    height: 114px;
+    /* background-color: pink; */
+    line-height: 114px;
+}
+
+.goods .hd h2, 
+.tuijian .hd h2,
+.pinpai .hd h2,
+.new .hd h2 {
+    float: left;
+    height: 114px;
+    font-size: 29px;
+    font-weight: 400px;
+}
+
+.goods .hd a ,
+.shengxian .hd .more, 
+.fushi .hd .more,
+.canchu .hd .more,
+.jvjia .hd .more,
+.new .hd a {
+    float: right;
+    color: #999;
+}
+
+.goods .hd span,
+.tuijian .hd span,
+.pinpai .hd span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .hd a::after,
+.shengxian .hd .more::after,
+.fushi .hd .more::after,
+.canchu .hd .more::after,
+.jvjia .hd .more::after,
+.new .hd a::after {
+    display: inline-block;
+    content: '';
+    margin-left: 13px;
+    vertical-align: middle;
+    width: 7px;
+    height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+}
+
+.goods .bd li {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+
+    text-align: center;
+}
+
+.goods .bd li:last-child,
+.tuijian .bd li:last-child  {
+    margin-right: 0;
+}
+
+.goods .bd li img, 
+.tuijian .bd li img {
+    width: 304px;
+}
+
+.goods .bd h3,
+.tuijian .bd h3 {
+   margin-top: 20px;
+   margin-bottom: 10px;
+   font-size: 20px;
+   font-weight: 400px;
+   color: #333;
+}
+
+.goods .bd li div {
+    font-size: 17px;
+    color: #9a2e1f;
+}
+
+.goods .bd li div span {
+    font-size: 23px;
+    color: #9a2e1f;
+}
+
+.goods .bd li b {
+    position: absolute;
+    top: 18px;
+    left: 17px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    border-radius: 2px;
+
+    font-size: 18px;
+    color: #27ba9b;
+    font-weight: 400px;
+    line-height: 24px;
+}
+
+/* 人气推荐 */
+.tuijian .bd li {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #fff;
+
+    text-align: center;
+}
+
+.tuijian .bd span {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #999;
+}
+
+/* 热门品牌 */
+.pinpai {
+    height: 466px;
+    background-color: #f5f5f5;
+}
+
+.pinpai .bd li {
+    float: left;
+    margin-left: 5px;
+    width: 244px;
+    height: 306px;
+    /* background-color: greenyellow; */
+}
+
+.pinpai .bd li img {
+    width: 244px;
+}
+
+.pinpai .bd li:first-child {
+    margin-left: 0;
+}
+
+/* 生鲜 */
+.shengxian .hd,
+.fushi .hd,
+.canchu .hd,
+.jvjia .hd {
+    height: 96px;
+    /* background-color: pink; */
+    line-height: 96px;
+}
+
+.shengxian .hd h2,
+.fushi .hd h2,
+.canchu .hd h2,
+.jvjia .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400px;
+}
+
+.shengxian .hd .more,
+.fushi .hd .more,
+.canchu .hd .more,
+.jvjia .hd .more {
+    float: right;
+}
+
+.shengxian .hd ul,
+.fushi .hd ul,
+.canchu .hd ul,
+.jvjia .hd ul {
+    float: right;
+    margin-right: 65px;
+}
+
+.shengxian .hd ul li,
+.fushi .hd ul li,
+.canchu .hd ul li,
+.jvjia .hd ul li {
+    float: left;
+}
+
+.shengxian .hd ul a,
+.fushi .hd ul a,
+.canchu .hd ul a,
+.jvjia .hd ul a {
+    padding: 4px 7px;
+    margin-left: 6px;
+}
+
+.shengxian .hd ul a:hover,
+.fushi .hd ul a:hover,
+.canchu .hd ul a:hover,
+.jvjia .hd ul a:hover {
+    color: #fff;
+    background-color: #27ba9b;
+}
+
+.shengxian .bd .left, 
+.fushi .bd .left,
+.canchu .bd .left,
+.jvjia .bd .left {
+    float: left;
+    width: 240px;
+    height: 610px;
+    /* background-color: pink; */
+}
+
+.shengxian .bd .right,
+.fushi .bd .right,
+.canchu .bd .right,
+.jvjia .bd .right {
+    float: right;
+    width: 1000px;
+    height: 610px;
+    /* background-color: skyblue; */
+}
+
+.shengxian .bd .right li,
+.fushi .bd .right li,
+.canchu .bd .right li,
+.jvjia .bd .right li {
+    display: block;
+    float: left;
+    margin-left: 8px;
+    width: 240px;
+    height: 304px;
+    /* background-color: pink; */
+}
+
+.shengxian .bd .right img,
+.fushi .bd .right img,
+.canchu .bd .right img,
+.jvjia .bd .right img {
+    margin: 8px 29px 0 29px;
+    width: 184px;
+}
+
+.shengxian .bd .right li .buttom,
+.fushi .bd .right li .buttom,
+.canchu .bd .right li .buttom,
+.jvjia .bd .right li .buttom {
+    padding: 6px 17px 0 29px;
+    font-size: 13px;
+    color: #9a2e1f;
+}
+
+.shengxian .bd .right li .buttom .a,
+.fushi .bd .right li .buttom .a,
+.canchu .bd .right li .buttom .a,
+.jvjia .bd .right li .buttom .a {
+    margin-bottom: 17px;
+    color: #333;
+}
+
+.shengxian .bd .right li .buttom span,
+.fushi .bd .right li .buttom span,
+.canchu .bd .right li .buttom span,
+.jvjia .bd .right li .buttom span {
+    font-size: 15px;
+}
+
+/* 服饰 */
+.fushi .bd .left img,
+.canchu .bd .left img ,
+.jvjia .bd .left img  {
+    height: 610px;
+}
+
+/* 最新专题 */
+.new {
+    margin-top: 52px;
+    height: 512px;
+    background-color: #f5f5f5;
+}
+
+.new .bd li {
+    position: relative;
+    float: left;
+    margin-right: 13px;
+    width: 404px;
+    height: 356px;
+
+    background-color: #fff; 
+}
+
+.new .bd li:last-child {
+    margin-right: 0;
+}
+
+.new .bd li img {
+    width: 404px;
+}
+
+.new .bd li .top h3 {
+    position: absolute;
+    left: 15px;
+    top: 222px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.new .bd li .top p {
+    position: absolute;
+    left: 15px;
+    top: 255px;
+    color: #999;
+}
+
+.new .bd li .top .out {
+    position: absolute;
+    right: 15px;
+    top: 233px;
+    width: 81px;
+    height: 27px;
+    padding: 1px 2px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 14px;
+    color: #9a2e1f;
+}
+
+.new .bd li .top .out span {
+    font-size: 17px;
+}
+
+.new .bd li .buttom .left {
+    position: absolute;
+    top: 310px;
+    left: 34px;
+    float: left;
+}
+
+.new .bd li .buttom .left .aixin {
+    margin-right: 24px;
+}
+
+.new .bd li .buttom .left .aixin::before {
+    display: inline-block;
+    content: '';
+    width: 15px;
+    height: 13px;
+    background-color: #fff;
+    background-image: url(../images/sprites.png);
+    background-position: -120px -110px;
+}
+
+.new .bd li .buttom .left .eye::before {
+    display: inline-block;
+    content: '';
+    width: 15px;
+    height: 13px;
+    background-color: #fff;
+    background-image: url(../images/sprites.png);
+    background-position: -160px -110px;
+}
+
+.new .bd li .buttom .right {
+    position: absolute;
+    top: 310px;
+    right: 18px;
+    float: right;
+}
+
+.new .bd li .buttom .right span::before {
+    display: inline-block;
+    content: '';
+    width: 15px;
+    height: 13px;
+    background-color: #fff;
+    background-image: url(../images/sprites.png);
+    background-position: -200px -110px;
+}
+
+/* 底部 */
+.dibu {
+    height: 300px;
+    background-color: #fff;
+}
