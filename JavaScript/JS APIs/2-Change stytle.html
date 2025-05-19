@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Document</title>
+  <style>
+    .div01 {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+    .box {
+      width: 300px;
+      height: 300px;
+      background-color: greenyellow;
+      margin: 100px auto;
+      padding: 10px;
+      border: 1px solid violet;
+    }
+
+    .bbc {
+      width: 200px;
+      height: 200px;
+      background-color: #000;
+    }
+
+    .active {
+      color: red;
+      background-color: blanchedalmond;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div01"></div>
+  <div class="bbc">文字</div>
+  <script>
+    // 1. Get element
+    const div01 = document.querySelector('.div01')
+    // 2. Add class name
+    div01.className = 'box'
+
+    // 3. Add by classlist   add : class name not add point, is string
+    const div02 = document.querySelector('.bbc')
+    div02.classList.add('active')
+    // remove 
+    div02.classList.remove('bbc')
+    // toggle
+    div02.classList.toggle('active')
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <style>
+    .father {
+      width: 500px;
+      height: 500px;
+      background-color: red;
+    }
+
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="father">
+    <div class="son"> </div>
+  </div>
+  <button>onclick</button>
+
+  <script>
+    const f = document.querySelector('.father')
+    const s = document.querySelector('.son')
+
+    addEventListener(eventclass, eventfunction, usecapture)
+    // usecapture: ture - capture      false = bubbling     default: false
+    // L0 event listrning no capture
+    document.addEventListener('click', function () {
+      alert('555')
+    })
+    f.addEventListener('click', function () {
+      alert('444')
+    })
+    s.addEventListener('click', function (a) {
+      alert('333')
+      // event bubbling:  When an element triggers an event, All the events of the same name of the parent elements will be called up in sequence
+      // prevent bubbling
+      // eventobject.stopPropagation()
+      a.stopPropagation()
+    })
+    // event binding
+    const btn = document.querySelector('button')
+    btn.onclick = function () {
+      alert('click')
+    }
+    // L0 event unbound
+    btn.onclick = null
+
+    // Anonymous functions cannot be unbound
+    const bt = document.querySelector('button')
+    function fn() {
+      alert('click')
+    }
+    bt.addEventListener('click', fn)
+    // L2 event unbound
+    bt.removeEventListener('click', fn)
+  </script>
+</body>
+
+</html>

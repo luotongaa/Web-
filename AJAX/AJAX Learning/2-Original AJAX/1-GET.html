@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX GET Request</title>
+    <style>
+        #result {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #909;
+        }
+    </style>
+</head>
+
+<body>
+    <button>click send request</button>
+    <div id="result"></div>
+    <script>
+        // get button element
+        const btn = document.getElementsByTagName('button')[0];
+
+        const result = document.getElementById('result');
+
+        // Binding event
+        btn.onclick = function () {
+            // 1. Creat object
+            const xhr = new XMLHttpRequest();
+            // 2. Initialization, set the request method and url
+            xhr.open('GET', 'http://127.0.0.1:8000/server');
+            // 3. Send
+            xhr.send(error);
+            // 4. Binding event Handle the results returned by the server side
+            // on     when 
+            // readystats : Attribute in xhr object, indicate status. There are five states in total：0、1、2、3、4  Detailed information can be seen E:\web learning\AJAX\AJAX学习\2-原始AJAX\1-GET.html
+            // change : Triggered when changes occur
+            xhr.onreadystatechange = function () {
+                // Judgement (When server side return all result)
+                if (xhr.readyState === 4) {
+                    // Determine the response status code : 200 404 403 401 500
+                    // This step is used to determine that the server response is successful
+                    if (xhr.status === 200) {      // Another way of writing : if(xhr.status>= 200 && xhr.status < 300)
+                        // Processing result  line  Head  Blank line Body
+                        // 1. response line
+                        console.log(xhr.status);                          // response status code
+                        console.log(xhr.statusText);                      // response string
+                        console.log(xhr.getAllResponseHeaders);           // all response request
+                        console.log(xhr.response);                        // response body
+
+                        // set result txt
+                        result.innerHTML = xhr.response;
+                    } else {
+
+                    }
+                }
+            }
+        }    
+    </script>
+</body>
+
+</html>

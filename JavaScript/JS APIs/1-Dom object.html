@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div>123</div>
+  <div class="box">6666</div>
+  <p id="nav">888</p>
+  <ul>
+    <li>01</li>
+    <li>02</li>
+  </ul>
+  <script>
+    const div = document.querySelector('div')
+    // print object
+    console.dir(div)
+    // Obtain the dom object based on the css selector
+    const box = document.querySelector('.box')
+    const nav = document.querySelector('#nav')
+    const li = document.querySelector('ul li:first-child')
+    // selector all li element
+    const lis = document.querySelectorAll('ul li')
+
+    div.style.backgroundColor = 'pink'
+    nav.style.color = 'red'
+    // innerText : Do not parse the label
+    div.innerText = '<strong>im a box</strong>'
+    // innerHTML : parse the label
+    div.innerHTML = '<strong>im a box</strong>'
+  </script>
+</body>
+
+</html>

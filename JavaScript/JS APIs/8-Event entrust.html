@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <p>no color</p>
+  </ul>
+  <script>
+    const ul = document.querySelector('ul')
+    ul.addEventListener('click', function (e) {
+      // alert(11)
+      if (e.target.tagName === 'LI') {
+        e.target.style.color = 'red'
+      }
+    })
+  </script>
+</body>
+
+</html>

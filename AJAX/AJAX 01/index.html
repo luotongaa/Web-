@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>AJAX 资讯展示</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript">
+        function loadNews() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    var news = JSON.parse(this.responseText);
+                    var newsContainer = document.getElementById('news-container');
+                    newsContainer.innerHTML = '';
+                    news.forEach(function(item) {
+                        var article = document.createElement('article');
+                        article.className = 'news-item';
+
+                        var title = document.createElement('h2');
+                        title.textContent = item.title;
+                        article.appendChild(title);
+
+                        var date = document.createElement('p');
+                        date.className = 'date';
+                        date.textContent = item.date;
+                        article.appendChild(date);
+
+                        var content = document.createElement('p');
+                        content.textContent = item.content;
+                        article.appendChild(content);
+
+                        var readMore = document.createElement('a');
+                        readMore.className = 'read-more';
+                        readMore.href = '#';
+                        readMore.textContent = '阅读更多';
+                        article.appendChild(readMore);
+
+                        newsContainer.appendChild(article);
+                    });
+                }
+            };
+            xhr.open('GET', 'news.json', true);
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>最新资讯</h1>
+        <button onclick="loadNews()">加载资讯</button>
+        <div id="news-container"></div>
+    </div>
+</body>
+</html>
